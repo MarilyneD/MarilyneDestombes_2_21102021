@@ -1,0 +1,682 @@
+/* general properties for the whole document */
+
+:root {
+  --blue: #0065fc;
+  --clear-blue: #deebff;
+  --clear-grey: #f2f2f2;
+  --star-grey: rgb(199, 193, 193);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+main {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* ===================================  H E A D E R  ============================================================= */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  padding-top: 20px;
+  padding-left: 60px;
+}
+.logo img {
+  width: 130px;
+  height: 77px;
+}
+
+nav ul {
+  display: flex;
+  padding-top: 25px;
+  padding-right: 60px;
+  list-style-type: none;
+  column-gap: 40px;
+}
+
+nav a:hover {
+  padding-top: 35px;
+  border-top: var(--blue) solid 3px;
+  color: var(--blue);
+}
+
+nav a:active {
+  padding-top: 25px;
+  border-top: var(--blue) solid 3px;
+}
+
+/* =========================  S E C T I O N  1 :  F O R M  & F I L T E R S  ============================================= */
+.first-section {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.first-section p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.formulary {
+  display: flex;
+  height: 80px;
+  justify-content: flex-start;
+  column-gap: 0px;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.formulary i {
+  display: flex;
+  background-color: var(--clear-grey);
+  object-fit: fill;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulary input {
+  display: flex;
+  font-weight: bold;
+  border-style: solid;
+  border-color: var(--clear-grey);
+  font-size: 18px;
+  height: 50px;
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.formulary button {
+  display: flex;
+  font-weight: bold;
+  border-style: none;
+  background-color: var(--blue);
+  font-size: 18px;
+  color: white;
+  left: -10px;
+  border-radius: 0 15px 15px 0;
+  height: 50px;
+  width: 140px;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+}
+
+.formulary button span i {
+  display: none;
+  background-color: var(--blue);
+  border-radius: 0px 15px 15px 0;
+}
+
+.filters {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  margin-top: 30px;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.filters a:hover {
+  transform: scale(1.2);
+  transition: transform 350ms;
+}
+
+.filter-title {
+  display: flex;
+  border: 2px solid var(--clear-grey);
+  height: 50px;
+  border-radius: 30px;
+  align-items: center;
+  padding-left: 0px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.filter-title i {
+  display: flex;
+  background-color: var(--clear-blue);
+  color: var(--blue);
+  object-fit: fill;
+  left: -10px;
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.info i {
+  display: flex;
+  border: 2px solid var(--clear-grey);
+  color: var(--blue);
+  object-fit: fill;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+} 
+
+/* ==============================  S E C T I O N  2  :  A C C O M O D A T I O N S  ======================================*/
+.accommodations-2panels {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 600px;
+}
+
+.accommodations {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 65%;
+  justify-content: space-evenly;
+  row-gap: 20px;
+  background-color: var(--clear-grey);
+  border-radius: 15px 15px 15px 15px;
+  font-size: 16px;
+}
+
+.accommodations h2 {
+  display: flex;
+  width: 100%;
+  padding-top: 30px;
+  padding-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.accommodations a {
+  display: flex;
+  height: 33%;
+  width: 30%;
+}
+
+.accommodations a:hover {
+  transform: scale(1.1);
+  transition: transform 450ms;
+}
+
+.card {
+  display: flex;
+  height: 100%;
+  max-height: 200px;
+  width: 100%;
+  box-shadow: 0 0 10px gray;
+  padding: 4px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.card-text {
+  padding-left: 10px;
+}
+
+.card h3 {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+.card p {
+  margin-top: 3px;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.card img {
+  width: 100%;
+  max-height: 140px;
+  height: 75%;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.more {
+  display: flex;
+  font-weight: bold;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 20px;
+}
+
+aside {
+  display: flex;
+  width: 33%;
+  height: 600px;
+  padding: 10px 20px 20px 20px;
+  background-color: var(--clear-grey);
+  border-radius: 15px 15px 15px 15px;
+  flex-direction: column;
+}
+
+aside h2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aside-card {
+  display: flex;
+  height: 150px;
+  width: 100%;
+  padding: 4px;
+  box-shadow: 0px 0px 10px gray;
+  background-color: white;
+  border-radius: 15px 15px 15px 15px;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.aside-card img {
+  width: 46%;
+  flex-shrink: 0;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 0px 0px 10px;
+  margin-right: 10px;
+}
+
+.aside-card-text {
+  margin-top: 20px;
+  width: 45%;
+  margin-bottom: 0px;
+  margin-right: 4%;
+  font-size: 12px;
+  text-align: justify;
+}
+
+.aside-card h3 {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+aside a:hover {
+  transform: scale(1.1);
+  transition: transform 450ms;
+}
+
+/* ===============================  S E C T I O N  3 : A C T I V I T I E S  ==================================================*/
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: space-between;
+}
+
+.activities a:hover {
+  transform: scale(1.1);
+  transition: transform 450ms;
+}
+
+.activities h2 {
+  width: 100%;
+  display: flex;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+.columntype1 {
+  display: flex;
+  width: 22%;
+}
+
+.columntype2 {
+  display: flex;
+  width: 22%;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.activity-big-card {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0px 0px 10px gray;
+  padding: 0;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 15px 15px 15px 15px;
+  font-size: 12px;
+}
+
+.activity-big-card img {
+  height: 300px;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.activity-big-card h3 {
+  padding-left: 10px;
+
+  height: 15px;
+}
+
+.activity-small-card {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0px 0px 10px gray;
+  padding: 0;
+  flex-direction: column;
+
+  background-color: white;
+  border-radius: 15px 15px 15px 15px;
+  font-size: 12px;
+}
+
+.activity-small-card img {
+  height: 110px;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.activity-small-card h3 {
+  padding-left: 15px;
+  height: 15px;
+}
+
+/* =======================================  F O O T E R  =============================================================*/
+footer {
+  display: flex;
+  margin-top: 70px;
+  column-gap: 150px;
+  background: var(--clear-grey);
+}
+
+footer h2 {
+  font-size: 18px;
+  margin-left: 50px;
+}
+
+footer ul {
+  list-style-type: none;
+  margin-left: 10px;
+  line-height: 30px;
+}
+
+footer a:link {
+  text-decoration: none;
+  color: black;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/*=================================  M E D I A  Q U E R I E S  F O R  T A B L E T  =========================================*/
+@media screen and (max-width: 992px) {
+  body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .logo {
+    padding-left: 50px;
+  }
+
+  .first-section {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
+  .formulary button {
+    width: 50px;
+  }
+  .submit-text {
+    display: none;
+  }
+  .formulary button span i {
+    display: flex;
+  }
+  .formulary input {
+    width: 200px;
+  }
+
+  .filters {
+    height: auto;
+    align-items: center;
+  }
+
+  .accommodations-2panels {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    height: auto;
+    row-gap: 10px;
+  }
+
+  .accommodations {
+    height: auto;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .accommodations a {
+    min-width: 220px;
+    height: 38%;
+    width: 40%;
+  }
+
+  aside {
+    width: 75%;
+    height: auto;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .aside-card img {
+    width: 55%;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    margin-right: 10px;
+  }
+
+  .activities {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+
+    row-gap: 20px;
+  }
+
+  .activity-big-card img {
+    height: 150px;
+  }
+
+  .activity-small-card img {
+    height: 150px;
+  }
+
+  .columntype1 {
+    width: 80%;
+  }
+
+  .columntype2 {
+    width: 80%;
+  }
+
+  footer {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    column-gap: 0px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  footer h2 {
+    margin-left: 0px;
+  }
+
+  footer ul {
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+}
+
+/*================================== M E D I A  Q U E R I E S  F O R  S M A R T P H O N E ========================================*/
+@media screen and (max-width: 768px) {
+  .logo {
+    padding-left: 30px;
+  }
+
+  main {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  header {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .logo img {
+    padding-left: 20px;
+    width: 100%;
+  }
+
+  nav {
+    width: 100%;
+    border-bottom: var(--clear-grey) solid 3px;
+  }
+
+  nav ul {
+    justify-content: space-evenly;
+    padding: 15px 0 0 0;
+  }
+
+  nav a:hover {
+    padding-top: 0px;
+    border-top: white;
+    padding-bottom: 16px;
+    border-bottom: var(--blue) solid 3px;
+  }
+
+  nav a:active {
+    padding-top: 25px;
+    border-top: white;
+    border-bottom: var(--blue) solid 3px;
+    padding-bottom: 16px;
+    color: var(--blue);
+  }
+
+  .filters p:first-child {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .accommodations {
+    background-color: white;
+  }
+
+  .accommodations a {
+    height: 28%;
+    width: 90%;
+  }
+
+  .accommodations img {
+    min-width: 100px;
+    height: 120px;
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+    border-radius: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .aside-card {
+    display: flex;
+    width: 100%;
+  }
+
+  .aside-card img {
+    width: 55%;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    margin-right: 10px;
+  }
+
+  .aside-card h3 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    margin-right: 0px;
+  }
+
+  .aside-card-text {
+    margin-top: 5px;
+    margin-right: 5%;
+  }
+
+  .columntype1,
+  .columntype2 {
+    width: 90%;
+  }
+
+  footer {
+    padding-left: 7%;
+    flex-direction: column;
+  }
+
+  footer ul {
+    margin-bottom: 35px;
+  }
+}
